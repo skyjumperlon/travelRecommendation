@@ -247,6 +247,23 @@ h2 {
     background-color: darkgreen; /* Darker green when hovering */
 }
 
+.searchIconButton {
+    background-color: green;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-flex; /* Flex to center the icon */
+    align-items: center; /* Center the icon inside the button */
+}
+
+.searchIconButton i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
 .searchButton {
     background-color: green; /* Green background */
     color: white; /* White text color */
