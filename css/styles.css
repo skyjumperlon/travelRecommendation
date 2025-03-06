@@ -75,6 +75,20 @@ header {
 .search-container {
     display: flex;
     align-items: center;
+    gap: 10px; /* Adds space between input and buttons */
+}
+
+.search-container input[type="text"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px; /* Fixed width for search box */
+}
+
+.search-container input[type="text"]:focus {
+    outline: none;
+    border-color: green; /* Focus effect */
 }
 
 /* Logo under the navbar */
@@ -233,6 +247,37 @@ h2 {
     background-color: darkgreen; /* Darker green when hovering */
 }
 
+.searchButton {
+    background-color: green; /* Green background */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Adjust padding for proper button size */
+    font-size: 16px; /* Set a reasonable font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Make the button look clickable */
+    text-align: center; /* Center text inside the button */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+.searchButton:hover {
+    background-color: darkgreen; /* Darker green when hovering */
+}
+
+.resetButton {
+    background-color: green; /* Green background */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Adjust padding for proper button size */
+    font-size: 16px; /* Set a reasonable font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Make the button look clickable */
+    text-align: center; /* Center text inside the button */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+.resetButton:hover {
+    background-color: darkgreen; /* Darker green when hovering */
+}
 
 /* Footer */
 footer {
