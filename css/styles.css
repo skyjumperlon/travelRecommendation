@@ -77,29 +77,6 @@ header {
     align-items: center;
 }
 
-.search-container input[type="text"] {
-    padding: 6px;
-    font-size: 16px;
-    border: none;
-    margin-right: 10px;
-}
-
-/* Search buttons */
-.search-container button {
-    background-color: green;
-    color: white;
-    padding: 6px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    margin-left: 5px;
-}
-
-.search-container button:hover {
-    background-color: darkgreen;
-}
-
 /* Logo under the navbar */
 .logo-container {
     width: 100%;
@@ -126,7 +103,6 @@ header {
     gap: 10px;
 }
 
-/* Social media icons */
 .social-icon {
     width: 30px;
     height: 30px;
@@ -149,7 +125,7 @@ header {
     top: 50%;
     left: 5%;
     transform: translateY(-50%);
-    width: 40%;
+    width: 60%;
     padding: 20px;
     color: white;
 }
@@ -164,31 +140,16 @@ header {
     margin-bottom: 20px;
 }
 
-/* Book Now Button */
-.book-now-btn {
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-
-.book-now-btn:hover {
-    background-color: darkgreen;
-}
-
 /* Team Section */
 .team-section {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-    gap: 20px; /* Configurable space between columns */
+    gap: 20px;
 }
 
 .column {
-    width: 22%; /* Adjust column width */
+    width: 22%;
     display: flex;
     flex-direction: column;
 }
@@ -198,34 +159,46 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* Team Member Box */
 .team-member {
-    background-color: rgba(200, 200, 200, 0.5); /* Slight grey transparent block */
+    background-color: rgba(200, 200, 200, 0.5);
     padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Keep content top aligned */
-    width: 100%; /* Ensure full width of column */
-    box-sizing: border-box; /* Ensure padding doesn't overflow */
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-width: 175px;
+    min-height: 120px;
+    text-align: center;
 }
 
 .team-content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
+    align-items: flex-start; /* Aligns the team-icon to the top */
+    justify-content: flex-start; /* Aligns the team-icon to the left */
 }
 
 .team-icon {
     width: 40px;
     height: 40px;
-    margin-right: 15px;
+    margin-right: 10px;
+    align-self: flex-start; /* Ensures the icon stays at the top */
+
 }
 
 .team-text {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: column;    
+    text-align: left;
     width: 100%;
+    padding: 5px 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .blue-btn {
@@ -236,12 +209,31 @@ h2 {
     border: none;
     border-radius: 5px;
     margin-top: 10px;
-    align-self: center; /* Center the button inside the block */
+    align-self: center;
+    width: auto;
+    max-width: 90%;
 }
 
 .blue-btn:hover {
     background-color: darkblue;
 }
+
+.book-now-btn {
+    background-color: green; /* Green background */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Adjust padding for proper button size */
+    font-size: 16px; /* Set a reasonable font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Make the button look clickable */
+    text-align: center; /* Center text inside the button */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+.book-now-btn:hover {
+    background-color: darkgreen; /* Darker green when hovering */
+}
+
 
 /* Footer */
 footer {
@@ -283,7 +275,7 @@ footer {
 
     .team-section {
         flex-direction: column;
-        gap: 20px; /* Ensure gap for mobile view */
+        gap: 20px;
     }
 
     .column {
