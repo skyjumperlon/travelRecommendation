@@ -333,7 +333,9 @@ footer {
 }
 
 /* Optional: Styling for form inside the right section */
-.contact-section .right form input[type="text"] {
+.contact-section .right .entry input[type="text"],
+.contact-section .right .entry input[type="email"],
+.contact-section .right .entry textarea {
     padding: 12px;
     width: 100%;
     font-size: 16px;
@@ -341,11 +343,79 @@ footer {
     border: 1px solid #ccc;
 }
 
-.contact-section .right form input[type="text"]:focus {
+.contact-section .right .entry form input[type="text"]:focus {
     outline: none;
     border-color: green; /* Focus effect */
 }
 
+/* Adjust the .right container to properly distribute the columns */
+.right {
+    display: grid;
+    grid-template-columns: 17% 83%; /* 2-column layout (labels and fields) */
+    width: 500px;
+}
+
+/* Ensure the labels and inputs use the full width available in their columns */
+.labels {
+    margin: 5px;
+    padding: 5px;
+    justify-self: right;
+    align-self: center;
+    grid-column: 1 / span 1;
+    width: 100%;
+}
+
+.entry {
+    margin: 5px;
+    padding: 5px;
+    align-self: center;
+    justify-self: left;
+    grid-column: 2 / span 1;
+    width: 100%;
+}
+
+.formButton {
+    margin: 10px 0;  /* Adjust margin */
+    padding: 10px 20px;  /* Adjust padding */
+    grid-column: 1 / span 2;  /* Span across both columns */
+    justify-self: center;  /* Center the button horizontally within the grid */
+    width: auto;  /* Button width auto to fit content */
+    text-align: center;  /* Center text inside button */
+}
+
+/* Make the input fields and textarea fully span their column */
+.entry input,
+.entry textarea {
+    width: 100%;  /* Ensure full width of the column */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;  /* Ensures padding doesn’t shrink the field */
+}
+
+/* Ensure the form element's input fields are styled correctly */
+.entry input[type="text"],
+.entry input[type="email"],
+.entry textarea {
+    width: 100%;  /* Ensure inputs span the full width of their container */
+}
+
+.submit-btn {
+    background-color: green; /* Green background */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Adjust padding for proper button size */
+    font-size: 16px; /* Set a reasonable font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Make the button look clickable */
+    text-align: center; /* Center text inside the button */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+.submit-btn:hover {
+    background-color: darkgreen; /* Darker green when hovering */
+}
 
 /* Responsive Design */
 @media screen and (max-width: 600px) {

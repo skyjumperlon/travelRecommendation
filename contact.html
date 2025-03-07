@@ -74,23 +74,35 @@
             </a>
         </div>
 
-        <!-- Contact Us Section -->
         <div class="contact-section">
-            <!-- Left section (Contact info or title) -->
             <div class="left">
                 <h1>CONTACT US</h1>
                 <p class="description">
                     If you have any questions, feel free to reach out. We are here to help!
                 </p>
             </div>
-            
-            <!-- Right section (Form) -->
-            <div class="right">
-                <form action="#" method="post">
-                    <input type="text" placeholder="Enter your message here" required />
-                </form>
-            </div>
+            <form action="#" method="post" style="width: 100%; padding: 0; margin: 0;">
+                <div class="right">
+                    <div class="labels name"><label for="name">Name:</label></div>
+                    <div class="entry name">
+                        <input id="name" type="text" size="50" placeholder="Enter your name here" required />
+                    </div>
+                    <div class="labels email"><label for="email">Email:</label></div>
+                    <div class="entry email">
+                        <input id="email" type="email" size="50" placeholder="name@domain.com" required />
+                    </div>
+                    <div class="labels messagel"><label for="message">Message:</label></div>
+                    <div class="entry message">
+                        <textarea id="message" name="message" rows="5" cols="100" required></textarea>
+                    </div>
+                    <div class="formButton">			
+                        <button type="submit" class="submit-btn">CONTACT</button>
+                    </div>
+                    </div>
+                </div>
+            </form>
         </div>
+        
         
     </main>
 
