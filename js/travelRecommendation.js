@@ -21,9 +21,9 @@ function searchTravelRecommendation() {
                 container.style.color = "black";
     
                 // Add some text inside the container
-                container.innerHTML = "<p><img src='./img/BrazilStatue.jpg' style='max-width: 100%; height: auto;' /></p>";
-                container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' style='max-width: 100%; height: auto;' /></p>";
-                container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' style='max-width: 100%; height: auto;' /></p>";
+                container.innerHTML = "<p><img src='./img/BrazilStatue.jpg' width='100%' height='100%' /></p>";
+                //container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' width='30%' height='25%' /></p>";
+                //container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' style='max-width: 100%; height: auto;' /></p>";
 
                 container.style.padding = "2px"; // Adds some spacing
                 container.style.border = "1px solid #ccc"; // Light border for visibility
