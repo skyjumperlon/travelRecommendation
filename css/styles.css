@@ -135,6 +135,7 @@ header {
 
 /* Explore Section */
 .explore-section {
+    display: inline-flex;
     position: absolute;
     top: 50%;
     left: 5%;
@@ -142,6 +143,12 @@ header {
     width: 60%;
     padding: 20px;
     color: white;
+}
+
+.explore-myleft, .explore-myright {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 .explore-section h1 {
