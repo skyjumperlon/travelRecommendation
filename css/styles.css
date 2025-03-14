@@ -75,6 +75,20 @@ header {
 .search-container {
     display: flex;
     align-items: center;
+    gap: 10px; /* Adds space between input and buttons */
+}
+
+.search-container input[type="text"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px; /* Fixed width for search box */
+}
+
+.search-container input[type="text"]:focus {
+    outline: none;
+    border-color: green; /* Focus effect */
 }
 
 /* Logo under the navbar */
@@ -188,7 +202,6 @@ h2 {
     height: 40px;
     margin-right: 10px;
     align-self: flex-start; /* Ensures the icon stays at the top */
-
 }
 
 .team-text {
@@ -234,6 +247,54 @@ h2 {
     background-color: darkgreen; /* Darker green when hovering */
 }
 
+.searchIconButton {
+    background-color: green;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-flex; /* Flex to center the icon */
+    align-items: center; /* Center the icon inside the button */
+}
+
+.searchIconButton i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.searchButton {
+    background-color: green; /* Green background */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Adjust padding for proper button size */
+    font-size: 16px; /* Set a reasonable font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Make the button look clickable */
+    text-align: center; /* Center text inside the button */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+.searchButton:hover {
+    background-color: darkgreen; /* Darker green when hovering */
+}
+
+.resetButton {
+    background-color: green; /* Green background */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Adjust padding for proper button size */
+    font-size: 16px; /* Set a reasonable font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Make the button look clickable */
+    text-align: center; /* Center text inside the button */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+.resetButton:hover {
+    background-color: darkgreen; /* Darker green when hovering */
+}
 
 /* Footer */
 footer {
@@ -241,6 +302,119 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 90%; /* Adjust width if needed */
+    display: flex;
+    padding: 20px;
+    color: white;
+}
+
+.contact-section .left,
+.contact-section .right {
+    width: 50%; /* Each section takes up 50% */
+    padding: 20px;
+}
+
+.contact-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact-section .description {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Optional: Styling for form inside the right section */
+.contact-section .right .entry input[type="text"],
+.contact-section .right .entry input[type="email"],
+.contact-section .right .entry textarea {
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-section .right .entry form input[type="text"]:focus {
+    outline: none;
+    border-color: green; /* Focus effect */
+}
+
+/* Adjust the .right container to properly distribute the columns */
+.right {
+    display: grid;
+    grid-template-columns: 17% 83%; /* 2-column layout (labels and fields) */
+    width: 500px;
+}
+
+/* Ensure the labels and inputs use the full width available in their columns */
+.labels {
+    margin: 5px;
+    padding: 5px;
+    justify-self: right;
+    align-self: center;
+    grid-column: 1 / span 1;
+    width: 100%;
+}
+
+.entry {
+    margin: 5px;
+    padding: 5px;
+    align-self: center;
+    justify-self: left;
+    grid-column: 2 / span 1;
+    width: 100%;
+}
+
+.formButton {
+    margin: 10px 0;  /* Adjust margin */
+    padding: 10px 20px;  /* Adjust padding */
+    grid-column: 1 / span 2;  /* Span across both columns */
+    justify-self: center;  /* Center the button horizontally within the grid */
+    width: auto;  /* Button width auto to fit content */
+    text-align: center;  /* Center text inside button */
+}
+
+/* Make the input fields and textarea fully span their column */
+.entry input,
+.entry textarea {
+    width: 100%;  /* Ensure full width of the column */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;  /* Ensures padding doesn’t shrink the field */
+}
+
+/* Ensure the form element's input fields are styled correctly */
+.entry input[type="text"],
+.entry input[type="email"],
+.entry textarea {
+    width: 100%;  /* Ensure inputs span the full width of their container */
+}
+
+.submit-btn {
+    background-color: green; /* Green background */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Adjust padding for proper button size */
+    font-size: 16px; /* Set a reasonable font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Make the button look clickable */
+    text-align: center; /* Center text inside the button */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+.submit-btn:hover {
+    background-color: darkgreen; /* Darker green when hovering */
 }
 
 /* Responsive Design */
