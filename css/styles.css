@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+.homepage {
+    background: transparent; /* Ensures no background */
+    background-image: url('../img/homePageBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: Keeps background in place on scroll */
+    font-family: Arial, sans-serif;
+}
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -93,11 +102,13 @@ header {
 
 /* Logo under the navbar */
 .logo-container {
+    position: absolute;
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 20px;
     background-color: black;
+    z-index: -100;
 }
 
 .full-page-logo {
@@ -134,16 +145,41 @@ header {
 }
 
 /* Explore Section */
+/*
 .explore-section {
     display: inline-flex;
     position: absolute;
     top: 150px;
-    left: 100px;
+    left: 50px;
     transform: translateY(-50%);
-    width: 60%;
+    width: 90%;
     padding: 20px;
     color: white;
     margin-top:5%;
+}
+*/
+
+.explore-section {
+    position: fixed;
+    top: 10px;
+    left: 40px;
+    display: inline-flex;
+    width: 90%;
+    padding: 20px;
+    color: white;
+    margin-top:5%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Pushes footer down */
+    padding: 20px;
+    /* background: #f0f0f0; */
 }
 
 .explore-myleft, .explore-myright {

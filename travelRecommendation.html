@@ -28,7 +28,7 @@
 
 </head>
 
-<body>
+<body class="homepage">
 	<header>
 		<nav class="navbar">
 			<!-- Logo and new link -->
@@ -50,17 +50,14 @@
 			<div class="search-container">
 				<input type="text" placeholder="Search..." id="searchBox" name="searchBox">			
                 <button class="searchIconButton"><i class="fas fa-search"></i></button>
-                <button id="searchButton" class="searchButton" onClick="searchTravelRecommendation();">Search</button>
+                <button id="searchButton" class="searchButton">Search</button>
 				<button id="resetButton" class="resetButton">Reset</button>
 			</div>
 		</nav>
 	</header>
 
+    <div class="wrapper">
 	<main>
-		<!-- Logo under navbar -->
-		<div class="logo-container">
-			<img src="img/homePageBackground.jpg" alt="Background Logo" class="full-page-logo">
-		</div>
 
 		<!-- Social Media Icons -->
 		<div class="social-media">
@@ -92,16 +89,22 @@
 
             <div id="explore-myright" class="explore-myright">
             </div>
-		</div>
 
 	</main>
+    
 
 	<footer>
 		<p>Footer</p>
 	</footer>
+    
+		</div>
+</div>
 
 	<!-- Include your Javascript files here -->
 	<script src="js/travelRecommendation.js"></script>
+    <script>
+        document.getElementById("searchButton").addEventListener("click", searchTravelRecommendation);
+    </script>
 
 </body>
 </html>
