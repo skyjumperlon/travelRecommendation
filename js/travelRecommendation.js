@@ -17,6 +17,7 @@ function searchTravelRecommendation() {
 
                 let container = document.getElementById("explore-myright");
                     // Set background color to white
+                    container.style.visibility = 'visible';
                 container.style.backgroundColor = "white";
                 container.style.color = "black";
     
@@ -25,8 +26,8 @@ function searchTravelRecommendation() {
                 //container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' width='800' height='600' /></p>";
                 //container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' width='800' heigh='600' /></p>";
 
-                container.style.padding = "2px"; // Adds some spacing
-                container.style.border = "1px solid #ccc"; // Light border for visibility
+                //container.style.padding = "2px"; // Adds some spacing
+                //container.style.border = "1px solid #ccc"; // Light border for visibility
             })
             .catch(error => console.error('There was a problem with the fetch operation:', error)
         );

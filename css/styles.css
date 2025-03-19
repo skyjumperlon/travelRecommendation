@@ -14,6 +14,11 @@
     font-family: Arial, sans-serif;
 }
 
+.spacer {
+    height: 50px;
+    width: 100vw;  /* Optional: ensures it spans the full width of its container */
+  }
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -157,6 +162,35 @@ header {
     height: 1000px;
 }
 
+/* Explore Section */
+.aboutus-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: fixed;
+    top: 10px;
+    left: 40px;
+    /* display: inline-flex; */
+    width: 90%;
+    padding: 20px;
+    color: white;
+    margin-top:5%;
+    height: 1000px;
+}
+
+/* Explore Section */
+.teams-section {
+    position: fixed;
+    top: 250px;
+    left: 40px;
+    display: inline-flex;
+    width: 90%;
+    padding: 20px;
+    color: white;
+    margin-top:5%;
+    height: 1000px;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -170,12 +204,17 @@ main {
 }
 
 .explore-myleft, .explore-myright {
+    margin: 0;
     width: 50%;
     padding: 10px;
     box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 .explore-myright {
+    visibility: hidden;
+    width: 840px;  /* 50% */
+    height: 1000px;
+    border: 5px solid black;
     overflow-y: auto;
 }
 
