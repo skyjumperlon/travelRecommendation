@@ -1,5 +1,7 @@
 const URL_PREFIX = '/jslab';
 
+const EMAIL_TO_SEND_TO = "someone@travelbloom.abc"
+
 function searchTravelRecommendation() {
     let searchText = document.getElementById('searchBox').value;
     console.log('Search text is ==>' + searchText + '<==');
@@ -17,24 +19,56 @@ function searchTravelRecommendation() {
 
                 let container = document.getElementById("explore-myright");
                     // Set background color to white
+                    container.style.visibility = 'visible';
                 container.style.backgroundColor = "white";
                 container.style.color = "black";
+                container.style.textAlign = "center";
     
                 // Add some text inside the container
-                container.innerHTML = "<p><img src='./img/BrazilStatue.jpg' style='max-width: 100%; height: auto;' /></p>";
-                container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' style='max-width: 100%; height: auto;' /></p>";
-                container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' style='max-width: 100%; height: auto;' /></p>";
+                container.innerHTML = "<p><img class='stockimage' src='./img/BrazilStatue.jpg' /></p>";
+                container.innerHTML += "<p class='city-name'>Sydney Australia</p>";
+                container.innerHTML += "<p class='city-description'>A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.</p>";
+                container.innerHTML += "<p class='visit-btn-container'><button class='visit-btn'>Visit</button></p>";
 
-                container.style.padding = "2px"; // Adds some spacing
-                container.style.border = "1px solid #ccc"; // Light border for visibility
+                //container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' width='800' height='600' /></p>";
+                //container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' width='800' heigh='600' /></p>";
+
+                //container.style.padding = "2px"; // Adds some spacing
+                //container.style.border = "1px solid #ccc"; // Light border for visibility
             })
             .catch(error => console.error('There was a problem with the fetch operation:', error)
         );
     }
+}
 
+function resetSearch() {
+    console.log("Reset invoked.");
+    let container = document.getElementById("explore-myright");
+    container.style.visibility = 'hidden';
 
+    const searchText = document.getElementById('searchBox');
+    searchText.value = '';
 }
 
 function isValidString(str) {
     return str !== null && str.trim() !== "";
+}
+
+function sendEmail() {
+    let nameFrom = document.getElementById('name').value;
+    let emailFrom = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
+
+    if (isValidString(nameFrom)
+        && isValidString(emailFrom)
+        && isValidString(message)) {
+        console.log("Attempting to submit form and send email");
+        window.location.href = `mailto:${EMAIL_TO_SEND_TO}?subject=Help&nameFrom=${nameFrom}&emailFrom=${emailFrom}&message=${message}`;
+        console.log("Email sent!");
+    } 
+    else {
+        alert('Please enter information into the form');
+    }  
+
+    return false;  // Do not actually submit the page
 }

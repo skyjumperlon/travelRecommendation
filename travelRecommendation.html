@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Travel Recommendation</title>
+	<title>TravelBloom - Travel Recommendation</title>
 	<meta name="description" content="Travel Company that makes Travel Recommendations">
 	<meta name="author" content="TravelBloom">
 
@@ -28,7 +28,7 @@
 
 </head>
 
-<body>
+<body class="prettybackground">
 	<header>
 		<nav class="navbar">
 			<!-- Logo and new link -->
@@ -49,18 +49,15 @@
 			<!-- Search box on the right -->
 			<div class="search-container">
 				<input type="text" placeholder="Search..." id="searchBox" name="searchBox">			
-                <button class="searchIconButton"><i class="fas fa-search"></i></button>
-                <button id="searchButton" class="searchButton" onClick="searchTravelRecommendation();">Search</button>
-				<button id="resetButton" class="resetButton">Reset</button>
+                <button id="searchIconButton" class="searchIconButton buttonNavBar" style="color: black; background-color: white; border: 0; border-radius: 0; width: 5px;"><i class="fas fa-search" style="border: 0; border-radius: 0; width: 5px;"></i></button>
+                <button id="searchButton" class="searchButton buttonNavBar">Search</button>
+				<button id="resetButton" class="resetButton buttonNavBar">Clear</button>
 			</div>
 		</nav>
 	</header>
 
+    <div class="wrapper">
 	<main>
-		<!-- Logo under navbar -->
-		<div class="logo-container">
-			<img src="img/homePageBackground.jpg" alt="Background Logo" class="full-page-logo">
-		</div>
 
 		<!-- Social Media Icons -->
 		<div class="social-media">
@@ -82,9 +79,15 @@
 		<div class="explore-section">
             <div class="explore-myleft">
 			    <h1>EXPLORE DREAM DESTINATION</h1>
+
+                <div class="spacer"></div>
+
 			    <p class="description">
 				    It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.
 			    </p>
+
+                <div class="spacer"></div>
+
 			    <div class="button-container">
 				    <button class="book-now-btn">BOOK NOW</button>
 			    </div>
@@ -92,16 +95,24 @@
 
             <div id="explore-myright" class="explore-myright">
             </div>
-		</div>
 
 	</main>
+    
 
 	<footer>
 		<p>Footer</p>
 	</footer>
+    
+	</div>
+</div>
 
 	<!-- Include your Javascript files here -->
 	<script src="js/travelRecommendation.js"></script>
+    <script type="text/javascript">
+        document.getElementById("searchButton").addEventListener("click", searchTravelRecommendation);
+        document.getElementById("resetButton").addEventListener("click", resetSearch);
+        document.getElementById("searchIconButton").addEventListener("click", searchTravelRecommendation);
+    </script>
 
 </body>
 </html>
