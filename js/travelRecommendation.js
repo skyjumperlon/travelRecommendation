@@ -44,7 +44,8 @@ function processSearchResults(searchText, data) {
     */
 
     if (result !== null 
-        && result.length > 0) {
+        && result.length > 0) {    
+        container.style.height = "500px";
         let currTime = "";
         container.innerHTML = "";
         result.forEach(element => {
