@@ -20,9 +20,13 @@ function searchTravelRecommendation() {
                     container.style.visibility = 'visible';
                 container.style.backgroundColor = "white";
                 container.style.color = "black";
+                container.style.textAlign = "center";
     
                 // Add some text inside the container
-                container.innerHTML = "<p><img src='./img/BrazilStatue.jpg' width='800' height='600' /></p>";
+                container.innerHTML = "<p><img class='stockimage' src='./img/BrazilStatue.jpg' /></p>";
+                container.innerHTML += "<p class='city-name'>Sydney Australia</p>";
+                container.innerHTML += "<p class='city-description'>A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.</p>";
+                
                 //container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' width='800' height='600' /></p>";
                 //container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' width='800' heigh='600' /></p>";
 
@@ -32,8 +36,12 @@ function searchTravelRecommendation() {
             .catch(error => console.error('There was a problem with the fetch operation:', error)
         );
     }
+}
 
-
+function resetSearch() {
+    console.log("Reset invoked.");
+    let container = document.getElementById("explore-myright");
+    container.style.visibility = 'hidden';
 }
 
 function isValidString(str) {
