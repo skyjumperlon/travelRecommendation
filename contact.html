@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Travel Recommendation</title>
+    <title>TravelBloom - Contact Us</title>
     <meta name="description" content="Travel Company that makes Travel Recommendations">
     <meta name="author" content="TravelBloom">
 
@@ -78,7 +78,7 @@
                     If you have any questions, feel free to reach out. We are here to help!
                 </p>
             </div>
-            <form action="#" method="post" style="width: 100%; padding: 0; margin: 0;">
+            <form id="contactForm" style="width: 100%; padding: 0; margin: 0;">
                 <div class="right">
                     <div class="labels name"><label for="name">Name:</label></div>
                     <div class="entry name">
@@ -90,10 +90,10 @@
                     </div>
                     <div class="labels messagel"><label for="message">Message:</label></div>
                     <div class="entry message">
-                        <textarea id="message" name="message" rows="5" cols="100" required></textarea>
+                        <textarea id="message" name="message" rows="5" cols="200" required></textarea>
                     </div>
                     <div class="formButton">			
-                        <button type="submit" class="submit-btn">CONTACT</button>
+                        <button id="contactButton" class="submit-btn">CONTACT</button>
                     </div>
                     </div>
                 </div>
@@ -110,7 +110,10 @@
     </div>
 
     <!-- Include your Javascript files here -->
-    <script src="js/scripts.js"></script>
-
+	<script src="js/travelRecommendation.js"></script>
+    <script type="text/javascript">
+        document.getElementById("contactForm").addEventListener("submit", sendEmail);
+        document.getElementById("contactButton").addEventListener("click", sendEmail);
+    </script>
 </body>
 </html>

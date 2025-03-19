@@ -1,5 +1,7 @@
 const URL_PREFIX = '/jslab';
 
+const EMAIL_TO_SEND_TO = "someone@travelbloom.abc"
+
 function searchTravelRecommendation() {
     let searchText = document.getElementById('searchBox').value;
     console.log('Search text is ==>' + searchText + '<==');
@@ -50,4 +52,23 @@ function resetSearch() {
 
 function isValidString(str) {
     return str !== null && str.trim() !== "";
+}
+
+function sendEmail() {
+    let nameFrom = document.getElementById('name').value;
+    let emailFrom = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
+
+    if (isValidString(nameFrom)
+        && isValidString(emailFrom)
+        && isValidString(message)) {
+        console.log("Attempting to submit form and send email");
+        window.location.href = `mailto:${EMAIL_TO_SEND_TO}?subject=Help&nameFrom=${nameFrom}&emailFrom=${emailFrom}&message=${message}`;
+        console.log("Email sent!");
+    } 
+    else {
+        alert('Please enter information into the form');
+    }  
+
+    return false;  // Do not actually submit the page
 }
