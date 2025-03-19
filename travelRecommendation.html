@@ -49,9 +49,9 @@
 			<!-- Search box on the right -->
 			<div class="search-container">
 				<input type="text" placeholder="Search..." id="searchBox" name="searchBox">			
-                <button class="searchIconButton"><i class="fas fa-search"></i></button>
-                <button id="searchButton" class="searchButton">Search</button>
-				<button id="resetButton" class="resetButton">Reset</button>
+                <button id="searchIconButton" class="searchIconButton buttonNavBar" style="color: black; background-color: white; border: 0; border-radius: 0; width: 5px;"><i class="fas fa-search" style="border: 0; border-radius: 0; width: 5px;"></i></button>
+                <button id="searchButton" class="searchButton buttonNavBar">Search</button>
+				<button id="resetButton" class="resetButton buttonNavBar">Clear</button>
 			</div>
 		</nav>
 	</header>
@@ -111,7 +111,8 @@
     <script>
         document.getElementById("searchButton").addEventListener("click", searchTravelRecommendation);
         document.getElementById("resetButton").addEventListener("click", resetSearch);
-    </script>
+        document.getElementById("searchIconButton").addEventListener("click", searchTravelRecommendation);
+</script>
 
 </body>
 </html>

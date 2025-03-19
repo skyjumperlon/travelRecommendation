@@ -26,7 +26,8 @@ function searchTravelRecommendation() {
                 container.innerHTML = "<p><img class='stockimage' src='./img/BrazilStatue.jpg' /></p>";
                 container.innerHTML += "<p class='city-name'>Sydney Australia</p>";
                 container.innerHTML += "<p class='city-description'>A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.</p>";
-                
+                container.innerHTML += "<p class='visit-btn-container'><button class='visit-btn'>Visit</button></p>";
+
                 //container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' width='800' height='600' /></p>";
                 //container.innerHTML += "<p><img src='./img/SydneyBridge.jpg' width='800' heigh='600' /></p>";
 
@@ -42,6 +43,9 @@ function resetSearch() {
     console.log("Reset invoked.");
     let container = document.getElementById("explore-myright");
     container.style.visibility = 'hidden';
+
+    const searchText = document.getElementById('searchBox');
+    searchText.value = '';
 }
 
 function isValidString(str) {

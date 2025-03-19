@@ -19,6 +19,10 @@
     width: 100vw;  /* Optional: ensures it spans the full width of its container */
   }
 
+  .buttonNavBar {
+    margin-right: 5px;
+  }
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -89,15 +93,18 @@ header {
 .search-container {
     display: flex;
     align-items: center;
-    gap: 10px; /* Adds space between input and buttons */
+    gap: 0; /* Adds space between input and buttons */
 }
 
 .search-container input[type="text"] {
-    padding: 12px 20px;
+    /*padding: 12px 20px;*/
     font-size: 16px;
+    /*
     border-radius: 5px;
     border: 1px solid #ccc;
-    width: 200px; /* Fixed width for search box */
+    */
+    width: 300px; /* Fixed width for search box */
+    height: 40px;
 }
 
 .search-container input[type="text"]:focus {
@@ -235,6 +242,10 @@ main {
     font-size: 1.0em;
 }
 
+.visit-btn-container {
+    text-align: left;
+}
+
 .explore-section h1 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -323,6 +334,18 @@ h2 {
 }
 
 .book-now-btn {
+    background-color: green; /* Green background */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Adjust padding for proper button size */
+    font-size: 16px; /* Set a reasonable font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Make the button look clickable */
+    text-align: center; /* Center text inside the button */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+.visit-btn {
     background-color: green; /* Green background */
     color: white; /* White text color */
     padding: 12px 24px; /* Adjust padding for proper button size */
@@ -540,10 +563,16 @@ footer {
         justify-content: center;
     }
 
-    .search-container input[type="text"],
-    .search-container button {
+    .search-container input[type="text"] {
         width: 100%;
         margin-top: 5px;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .search-container button {
+        width: 100%;
+        margin: 5px;
     }
 
     .explore-section {
