@@ -145,20 +145,6 @@ header {
 }
 
 /* Explore Section */
-/*
-.explore-section {
-    display: inline-flex;
-    position: absolute;
-    top: 150px;
-    left: 50px;
-    transform: translateY(-50%);
-    width: 90%;
-    padding: 20px;
-    color: white;
-    margin-top:5%;
-}
-*/
-
 .explore-section {
     position: fixed;
     top: 10px;
@@ -168,6 +154,7 @@ header {
     padding: 20px;
     color: white;
     margin-top:5%;
+    height: 1000px;
 }
 
 .wrapper {
@@ -186,6 +173,10 @@ main {
     width: 50%;
     padding: 10px;
     box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.explore-myright {
+    overflow-y: auto;
 }
 
 .explore-section h1 {
