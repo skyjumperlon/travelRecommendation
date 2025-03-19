@@ -72,3 +72,16 @@ function sendEmail() {
 
     return false;  // Do not actually submit the page
 }
+
+function showTime() {
+    const options = {
+        timeZone: 'America/New_York',
+        hour12: true,
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric'
+    };
+
+    //document.getElementById("time").textContent = 
+    new Date().toLocaleTimeString('en-US', options);
+}
