@@ -7,6 +7,10 @@ function searchTravelRecommendation() {
     console.log('Search text is ==>' + searchText + '<==');
     if (isValidString(searchText)) {     
         searchText = searchText.toLowerCase();
+        searchText = replaceText(searchText, "country", "countries");
+        searchText = replaceText(searchText, "beach", "beaches");
+        searchText = replaceText(searchText, "temple", "temples");
+
 
         fetch('https:' + URL_PREFIX + '/travel_recommendation_api.json')
             .then(response => {
@@ -20,6 +24,10 @@ function searchTravelRecommendation() {
             .catch(error => console.error('There was a problem with the fetch operation:', error)
         );
     }
+}
+
+function replaceText(text, oldString, newString) {
+    return text === oldString ? newString : text;
 }
 
 function processSearchResults(searchText, data) {
