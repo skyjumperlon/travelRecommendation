@@ -2,7 +2,7 @@
 /* Author: Lonne Osborn */
 /* Coursera Javascript Programming Essentials */
 
-const URL_PREFIX = '/jslab';
+const URL_PREFIX = '/travelRecommendation';
 
 const EMAIL_TO_SEND_TO = "someone@travelbloom.abc"
 
