@@ -19,6 +19,11 @@
     width: 100vw;  /* Optional: ensures it spans the full width of its container */
   }
 
+  .spacer2 {
+    height: 15px;
+    width: 95%;  /* Optional: ensures it spans the full width of its container */
+  }
+
   .buttonNavBar {
     margin-right: 5px;
   }
@@ -220,7 +225,9 @@ main {
 .explore-myright {
     visibility: hidden;
     width: 435px;  /* 50% */
-    height: 500px;
+    height: 50px;
+    max-height: 500px;
+    /* height: 500px; */
     border: 5px solid black;
     overflow-y: auto;
 }
@@ -234,6 +241,12 @@ main {
     text-align: left;
     font-weight: bold;
     font-size: 1.2em;
+}
+
+.time {
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.0em;
 }
 
 .city-description {
