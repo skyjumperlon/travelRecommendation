@@ -112,7 +112,6 @@ function getTime(timezoneStr) {
         second: 'numeric'
     };
 
-    //document.getElementById("time").textContent = 
     var currTimeInCountry = new Date().toLocaleTimeString('en-US', options);
     console.log(`Current time in ${timezoneStr} is ${currTimeInCountry}`);
     return currTimeInCountry;
@@ -121,6 +120,7 @@ function getTime(timezoneStr) {
 function getRecommendationForSearchCriteria(searchCriteria, data) {
     if (data[searchCriteria]) {
       return data[searchCriteria].map(item => {
+        //Go a level deeper if countries
         if (searchCriteria === "countries") {
           return item.cities.map(city => ({
             name: city.name,
