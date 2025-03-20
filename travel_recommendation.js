@@ -1,3 +1,7 @@
+/* travel_recommendation.js */
+/* Author: Lonne Osborn */
+/* Coursera Javascript Programming Essentials */
+
 const URL_PREFIX = '/jslab';
 
 const EMAIL_TO_SEND_TO = "someone@travelbloom.abc"
